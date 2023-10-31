@@ -3,8 +3,10 @@
   --light-l: #dbdada;
   --light-m: #c7c7c7;
   --middle: #838383;
-  --dark-m: #424242;
+  --dark-l: #424242;
+  --dark-m: #252525;
   --dark: #1a1a1a;
+  --dark-opaque: rgba(26, 26, 26, 0.8);
   --blue: #1676ff;
   --purple: #782bf6;
   --blue-m: #4588e6;
@@ -23,15 +25,6 @@ body {
   color: var(--light);
 }
 
-/* CLASSES FOR GENERAL USE */
-
-.inner-text-gradient {
-  background: -webkit-linear-gradient(-45deg, var(--blue), var(--purple));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 /* DEVICE MARGIN */
 
 header,
@@ -48,6 +41,10 @@ footer {
   footer {
     margin: 0 auto;
   }
+
+  header {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1169px) {
@@ -56,6 +53,10 @@ footer {
   #music-player-wrp,
   footer {
     margin: 0 30px;
+  }
+
+  header {
+    width: calc(100% - 60px);
   }
 }
 
@@ -66,49 +67,67 @@ footer {
   footer {
     margin: 0 20px;
   }
+
+  header {
+    width: calc(100% - 40px);
+  }
+}
+
+/* CLASSES */
+.italic-txt-dimmed {
+  text-align: center;
+  color: var(--dark-l);
+  font-style: italic;
+  margin: 1rem 0;
 }
 
 /* HEADER */
 
 header {
-  position: relative;
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  background-color: var(--dark-opaque);
+  backdrop-filter: blur(3px);
+  z-index: 10;
 }
 
-header #domain-extenision {
-  color: var(--light);
-}
-
-header #burger-menu-btn {
-  background-color: transparent;
-  border: none;
+header a {
   margin-top: 5px;
 }
 
-header #burger-menu-btn #burger-menu-icon {
-  fill: var(--light-m);
+#burger-menu-btn {
+  background-color: transparent;
+  border: none;
+}
+
+#burger-menu-btn-icon {
+  fill: var(--light-l);
+  transform: rotate(90deg);
   transition: 0.2s fill;
   cursor: pointer;
 }
 
-header #burger-menu-btn #burger-menu-icon:hover {
+#burger-menu-btn-icon:hover {
   fill: var(--light);
 }
 
 #burger-menu {
+  opacity: 0;
   display: none;
   position: absolute;
   top: 70px;
-  right: 0;
-  background-color: var(--light);
+  right: -100px;
+  width: 250px;
+  height: calc(100vh - 70px);
+  background-color: var(--dark-opaque);
   padding: 10px 0;
-  border-radius: 15px;
-  color: var(--dark);
   user-select: none;
-  z-index: 10;
+  transition-property: right, opacity;
+  transition: 0.4s cubic-bezier(0.47, 0.37, 0.18, 1);
 }
 
 #burger-menu ul {
@@ -123,7 +142,17 @@ header #burger-menu-btn #burger-menu-icon:hover {
 }
 
 #burger-menu ul li:hover {
-  background-color: var(--light-l);
+  background-color: var(--dark-l);
+}
+
+#burger-menu-abandon {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
 }
 
 /* MAIN */
@@ -131,7 +160,7 @@ header #burger-menu-btn #burger-menu-icon:hover {
 /* * BANNER * */
 
 #banner {
-  margin-bottom: 70px;
+  margin: 140px 0 70px;
 }
 
 #banner h2 {
@@ -147,44 +176,36 @@ header #burger-menu-btn #burger-menu-icon:hover {
 #profile-photo {
   position: relative;
   display: block;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   margin: 50px auto;
 }
 
-/* * POSTS * */
-
-#posts img {
-  width: 100%;
-  border-radius: 15px;
-  margin: 15px 0;
-}
-
-/* MUSIC PLAYER */
+/* * MUSIC PLAYER * */
 
 #music-player {
-  position: fixed;
-  bottom: 15px;
-  width: 40%;
-  height: 70px;
-  margin: 0 30%;
-  border-radius: 50px;
-  background-color: rgba(26, 26, 26, 0.65);
-  backdrop-filter: blur(3px);
-  transition: bottom 0.3s cubic-bezier(1, 0, 0.71, 0.47);
+  width: 100%;
+  height: 140px;
+  margin: 0 auto 70px auto;
+  border-radius: 10px;
+  border: solid 2px var(--dark-m);
+  background-image: linear-gradient(
+    -45deg,
+    var(--dark) 27%,
+    var(--dark-m) 27%,
+    var(--dark-m) 80%,
+    var(--dark-l) 80%
+  );
 }
 
 #music-player-wrp {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 150px;
   height: 100%;
-}
-
-#mid-ctrls {
-  display: flex;
-  gap: 25px;
+  margin: auto;
 }
 
 #music-player-wrp button {
@@ -194,6 +215,14 @@ header #burger-menu-btn #burger-menu-icon:hover {
   fill: var(--light);
   background-color: transparent;
   cursor: pointer;
+}
+
+/* * GALERIA * */
+
+#gallery img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
 }
 
 /* FOOTER */
@@ -207,5 +236,5 @@ footer {
 
 footer #footer-msg {
   font-weight: 400;
-  color: var(--dark-m);
+  color: var(--dark-l);
 }
