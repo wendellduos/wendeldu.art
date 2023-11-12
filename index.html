@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Wendel Duarte</title>
-    <link
-      rel="shortcut icon"
-      href="./assets/img/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,49 +15,20 @@
     />
   </head>
   <body>
-    <header>
-      <a href="https://wendeldu.art">
-        <img src="./assets/img/logo.png" alt="Logo" width="50" />
-      </a>
-      <button id="burger-menu-btn" type="button">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          id="burger-menu-btn-icon"
-          viewBox="0 0 24 24"
-          width="25"
-          height="25"
-        ></svg>
-      </button>
-      <div id="burger-menu">
-        <ul>
-          <li>Alguma Coisa</li>
-          <li>Alguma Coisa</li>
-          <li>Alguma Coisa</li>
-          <li>Alguma Coisa</li>
-        </ul>
-      </div>
-    </header>
-    <div id="burger-menu-abandon"></div>
     <main>
-      <section id="banner">
-        <img
-          src="./assets/img/profile.jpeg"
-          alt="Foto de perfil"
-          id="profile-photo"
-        />
-        <h2>Wendel Duarte dos Santos</h2>
-        <h3>Web & Waves</h3>
+      <img src="./assets/img/profile.jpeg" alt="Foto de perfil" id="profile-photo" />
+      <div id="spacer"></div>
+      <section id="main-frame">
+        <!-- <h2 id="name">Wendel Duarte dos Santos</h2>
+        <h3>Web & Waves</h3> -->
       </section>
-      <section id="music-player">
+      <div id="music-player">
         <!-- song list -->
         <div style="display: none">
           <audio src="./assets/music/motion_opt.mp3" data-song="first"></audio>
           <audio src="./assets/music/drown_opt.mp3" data-song="second"></audio>
           <audio src="./assets/music/caier_opt.mp3" data-song="third"></audio>
-          <audio
-            src="./assets/music/windchime_opt.mp3"
-            data-song="fourth"
-          ></audio>
+          <audio src="./assets/music/windchime_opt.mp3" data-song="fourth"></audio>
         </div>
         <div id="music-player-wrp">
           <button type="button" id="previous-btn">
@@ -100,28 +67,8 @@
             </svg>
           </button>
         </div>
-        <p class="italic-txt-dimmed">
-          Controles de música também disponíveis no menu lateral.
-        </p>
-      </section>
-      <section id="gallery">
-        <h3>Galeria</h3>
-        <img
-          src="./assets/img/night-sky_photo.jpeg"
-          alt="Imagem de um céu estrelado em preto e branco"
-        />
-        <img
-          src="./assets/img/missy-portrait.jpg"
-          alt="Minha gata missy sentada"
-        />
-      </section>
-      <section id="projs">
-        <h3>Projetos</h3>
-      </section>
+      </div>
     </main>
-    <footer>
-      <h3 id="footer-msg">Feito com ❤ por Wendel Duarte.</h3>
-    </footer>
     <script src="./main.js"></script>
   </body>
 </html>
