@@ -12,13 +12,26 @@
       <div id="home-banner-profile-pic">
         <div id="home-banner-logo"></div>
       </div>
+      <h1 class="title center-text">Wendel Duarte</h1>
+      <h2 class="center-text dimmed normal-wght" id="home-banner-subtext">Que meus feitos possam trazer um pouco de paz e alegria à este mundo conturbado.</h2>
     </div>
   </section>
-  <section>
-    <h1 class="title center-text">Wendel Duarte</h1>
-    <h2 class="center-text dimmed normal-wght">wendeldu.art</h2>
-    <p><span class="first-letter">L</span>orem ipsum dolor sit amet consectetur adipisicing elit. In consequatur voluptatibus ea assumenda excepturi minus quos adipisci ducimus dicta quam ab, consequuntur natus fugiat ipsa vitae aperiam itaque. Sunt, itaque.</p>
-  </section>
-  <a href="./chat.php">Chat</a>
+  <nav>
+    <ul>      
+      <li>
+        <a class="<?= urlIs("/") ? 'selected' : 'unselected' ?>" href="../home.php">Home</a>
+      </li>
+      <li>
+        <a class="<?= urlIs("/sobre") ? 'selected' : 'unselected' ?>" href="../about.php">Sobre</a>
+      </li>
+      <li>
+        <a class="<?= urlIs("/projetos") ? 'selected' : 'unselected' ?>" href="../projects.php">Projetos</a>
+      </li>
+      <li>
+        <a class="<?= urlIs("/contato") ? 'selected' : 'unselected' ?>" href="../contact.php">Contato</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- <a href="./chat.php">Chat</a> -->
 </body>
 </html>
