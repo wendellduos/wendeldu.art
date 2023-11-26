@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,700;1,400;1,700&family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Young+Serif&display=swap");
 
 :root {
   --gray1: #242424;
@@ -11,7 +11,7 @@
   --light2: #dbdbdb;
   --light2: #bbbbbb;
 
-  --blue-soft: #4e9ee9;
+  --orange: #9c4f37;
 }
 
 * {
@@ -47,6 +47,12 @@ body {
 .dimmed {
   color: var(--gray5);
 }
+.more-dimmed {
+  color: var(--light2);
+}
+.line-through {
+  text-decoration: line-through;
+}
 .normal-wght {
   font-weight: 400;
 }
@@ -59,7 +65,7 @@ body {
   color: var(--gray2);
 }
 .ident {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 .section-title {
   margin: 2rem 0 1rem 0;
@@ -77,6 +83,12 @@ body {
   background-color: var(--gray1);
   transform: rotate(45deg);
 }
+.italic {
+  font-style: italic;
+}
+.bold {
+  font-weight: 600;
+}
 p {
   margin-bottom: 1rem;
 
@@ -84,7 +96,9 @@ p {
   line-height: 1.5rem;
   letter-spacing: 0.3px;
 }
-
+p a {
+  color: var(--orange);
+}
 /* * MILD RESPOSIVENESS * */
 section,
 nav {
