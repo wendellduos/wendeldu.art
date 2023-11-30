@@ -28,6 +28,11 @@
 html {
   font-size: 16px;
 }
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 12px;
+  }
+}
 
 body {
   width: 100vw;
@@ -83,21 +88,21 @@ p {
   letter-spacing: 0.3px;
 }
 p a {
-  color: var(--green);
+  color: var(--old-orange);
 }
 
 /* * MILD RESPOSIVENESS * */
 section,
-header {
-  width: calc(100% - 40px);
+#landscape-deco div:nth-child(3) {
+  width: calc(100% - 2rem);
   max-width: 1100px;
   margin: 0 auto;
 }
 
 /* * HOME BANNER * */
 #home-banner {
-  margin: 20px auto;
-  padding: 40px 20px;
+  margin: 2rem auto;
+  padding: 2rem;
 
   border: 2px solid var(--background);
   border-radius: 12px;
@@ -105,7 +110,8 @@ header {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 2rem;
 }
 #logo {
   width: 4rem;
@@ -113,7 +119,7 @@ header {
 #deco-lines-wrp {
   display: inline-block;
 
-  height: 10px;
+  height: 7px;
   width: 100%;
 }
 #deco-lines {
@@ -122,8 +128,7 @@ header {
   justify-content: center;
 
   height: 100%;
-  width: 80%;
-  margin: 0 auto;
+  width: 60%;
 
   border: 1px solid var(--sand);
   border-top-left-radius: 7px;
@@ -177,4 +182,43 @@ h1 {
 #home-banner-profile-info h2 {
   font-weight: 300;
   font-size: 1rem;
+}
+
+/* * LANDSCAPE DECO * */
+#landscape-deco {
+  position: relative;
+
+  width: 100%;
+
+  background-color: var(--sand);
+
+  color: var(--background);
+}
+#landscape-deco div:nth-child(1) {
+  position: absolute;
+
+  width: 100%;
+  height: 60px;
+
+  background-image: url("../assets/img/pine-trees.png");
+
+  z-index: 2;
+}
+#landscape-deco div:nth-child(2) {
+  position: absolute;
+
+  width: 100%;
+  height: 120px;
+
+  background-image: url("../assets/img/mountains.svg");
+  background-position: 50%;
+
+  z-index: 1;
+}
+#landscape-deco div:nth-child(3) img {
+  margin-top: 100px;
+
+  filter: drop-shadow(0 0 50px var(--old-orange));
+
+  z-index: 0;
 }
