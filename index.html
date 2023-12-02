@@ -7,46 +7,60 @@
     <link rel="stylesheet" href="../styles/styles.css" />
   </head>
   <body>
-    <section id="home-banner">
-      <header>
-        <a href="https://wendeldu.art">
-          <img id="logo" src="./assets/img/logo-full-scale.svg" alt="Imagem da logo" />
-        </a>
-        <div id="deco-lines-wrp">
-          <div id="deco-lines">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+    <section id="banner">
+      <div id="banner-wrp">
+        <div id="banner-wrp-casing">
+          <div>
+            <img id="logo" src="./assets/img/logo-full-scale.svg" alt="Imagem da logo" />
+            <div id="deco-lines">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
           </div>
-        </div>
-      </header>
-      <h2 id="home-banner-text">
-        Que meus feitos possam trazer um pouco de paz e alegria a este mundo conturbado.
-      </h2>
-      <div id="home-banner-profile">
-        <img id="profile-pic" src="./assets/img/profile.jpeg" alt="Imagem de perfil" />
-        <div id="home-banner-profile-info">
-          <h1>Wendel Duarte</h1>
-          <h2 class="dimmed">Desenvolvedor Web</h2>
+          <h2 class="center-text" id="banner-text">
+            Que meus feitos possam trazer um pouco de paz e alegria a este mundo conturbado.
+          </h2>
+          <div id="profile">
+            <img id="profile-pic" src="./assets/img/profile.jpeg" alt="Imagem de perfil" />
+            <div id="profile-info">
+              <h1>Wendel Duarte</h1>
+              <h2 class="dimmed">Desenvolvedor Web</h2>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <div id="landscape-deco">
-      <div></div>
-      <div></div>
+
+    <section id="deco-atmosphere-layers">
       <div>
-        <img src="./assets/img/sun.svg" alt="Imagem do sol, em contexto com as montanhas" />
+        <svg preserveAspectRatio="none" viewbox="0 -10 100 70">
+          <circle cx="50" cy="50" r="57" fill="var(--background)" />
+        </svg>
       </div>
-      <section>
-        <h2 class="section-title center-text">Sobre</h2>
+      <div>
+        <svg preserveAspectRatio="none" viewbox="0 -10 100 70">
+          <circle cx="50" cy="50" r="57" fill="var(--sand-shadow)" />
+        </svg>
+      </div>
+      <div>
+        <svg preserveAspectRatio="none" viewbox="0 -10 100 70">
+          <circle cx="50" cy="50" r="57" fill="var(--sand)" />
+        </svg>
+      </div>
+    </section>
+
+    <main>
+      <div id="main-wrp">
+        <h2 class="section-title">Sobre Mim</h2>
         <p>
-          <span class="first-letter ident">F</span>ui fabricado em 98 na cidade de Macapá - AP. Uma
-          cidade simples que, com todos seus defeitos, abrigou minha família e eu até o ano de 2017,
-          onde nos mudamos para Joinville - SC.
+          Fui fabricado em 98 na cidade de Macapá - AP. Uma cidade simples que, com todos seus
+          defeitos, abrigou minha família e eu até o ano de 2017, onde nos mudamos para Joinville -
+          SC.
         </p>
-        <p class="italic center-text more-dimmed line-through">
+        <p class="italic center-text dimmed line-through">
           Por que é tão difícil escrever autodescrições?
         </p>
         <p>
@@ -62,7 +76,7 @@
         </p>
         <p>
           Felizmente, vivo em termos com minha personalidade, e por isso, não mais vejo-a como um
-          problema, ou algo a ser melhorado. Ajuda, também, que
+          problema, ou algo a ser melhorado. É de grnade ajuda, também, que
           <a href="https://instagram.com/kruger_barbi" target="_blank">minha amada</a> oscila na
           mesma frequência que eu, e partilha de vários dos meus aspectos pessoais.
         </p>
@@ -77,29 +91,75 @@
           quem eu sou na vida real.
         </p>
         <p>No mais, seja bem-vindo(a)!</p>
-      </section>
-      <section>
-        <h2 class="section-title center-text">Criações</h2>
+
+        <br /><br /><br />
+        <h2 class="section-title">Criações</h2>
         <p>
-          <span class="first-letter ident">S</span>orem, ipsum dolor sit amet consectetur
-          adipisicing elit. Placeat animi rerum velit nesciunt officiis corrupti beatae aliquid?
-          Natus dolore minus incidunt expedita laboriosam quo delectus reiciendis amet assumenda
-          mollitia! Suscipit!
+          Uma coletânea de algumas das coisas que criei. Talvez em algumas delas você se pergunte
+          "por que?". E eu respondo:
         </p>
-      </section>
-      <section>
-        <h2 class="section-title center-text">Contato</h2>
+        <p class="center-text italic bigger">Porque não?</p>
+
+        <h3 class="section-subtitle">Músicas</h3>
+
+        <!-- conteudo musical -->
+        <br /><br /><br />
+
+        <p class="center-text">Os exemplos são instrumentais</p>
         <p>
-          <span class="first-letter ident">R</span>orem ipsum dolor sit amet consectetur adipisicing
-          elit. Fugit perspiciatis magnam molestias optio cum totam, ex omnis quibusdam. Quia,
-          distinctio deserunt ad officia fuga rerum est illo aliquid debitis doloribus!
+          Na produção musical aprecio muito a capacidade de criar sons do zero (Sound Design em
+          inglês). Por isso, faço uso de sintetizadores e pós-processamento para atingir os sons e
+          texturas que mentalizo.
+        </p>
+
+        <h3 class="section-subtitle">Galeria</h3>
+
+        <!-- conteudo fotografico -->
+        <br /><br /><br />
+
+        <p>
+          No mundo da fotografia, a captura da imagem é somente um passo do processo. Considero a
+          edição (ou Color Correction) essencial para alcançar um sentimento ou visual específico na
+          imagem.
+        </p>
+
+        <h3 class="section-subtitle">Programação</h3>
+
+        <!-- conteudo programatico -->
+        <br /><br /><br />
+
+        <p>
+          Atualmente me foco e limito a adquirir conhecimento especializado em
+          <span class="bold">desenvolvimento web</span>, onde utilizo HTML, CSS, JavaScript, PHP e
+          MariaDB para minhas aplicações.
         </p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, officia exercitationem
-          aperiam doloremque error vel perferendis dicta nam, dolorem tenetur ipsa aliquid
-          asperiores sapiente sequi soluta, labore quam consectetur vitae!
+          Enquanto é verdade que sou principalmente, <span class="italic">self-taught</span>, gosto
+          de mencionar que estou sempre buscando me aprofundar nos conhecimentos pertinentes, e
+          pretendo diversificar minhas capacidades, sem me sobrecarregar.
         </p>
-      </section>
-    </div>
+      </div>
+    </main>
+
+    <section id="deco-landscape">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+
+    <section id="contact">
+      <div id="contact-wrp">
+        <h2 class="section-title">Contato</h2>
+        <p>Ficarei feliz em responder seu contato no endereço de email abaixo:</p>
+        <a href="mailto:contato@wendeldu.art">contato@wendeldu.art</a><br /><br />
+        <p>
+          Ou me encontre no <a href="https://github.com/wendellduos" target="_blank">GitHub</a>, e
+          <a href="https://linkedin.com/in/wendellduos" target="_blank">LinkedIn</a>.
+        </p>
+      </div>
+
+      <!-- adicionar arquivo de curriculo -->
+    </section>
   </body>
 </html>

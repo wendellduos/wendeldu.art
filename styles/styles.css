@@ -1,15 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&family=Lexend:wght@300;400;500;600;800&display=swap");
 
 :root {
-  --blue: #6272a4;
-  --cyan: #8be9fd;
-  --green: #50fa7b;
-  --orange: #ffb86c;
-  --pink: #ff79c6;
-  --purple: #bd93f9;
-  --red: #ff5555;
-  --yellow: #f1fa8c;
-
   --sand: #fffcf2;
   --sand-shadow: #ccc5b9;
   --background: #403d39;
@@ -28,6 +19,7 @@
 html {
   font-size: 16px;
 }
+
 @media screen and (max-width: 375px) {
   html {
     font-size: 12px;
@@ -43,42 +35,48 @@ body {
   color: var(--sand);
 }
 
-/* * TEXT CLASSES AND APPEARENCE * */
-.title {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
-  font-size: 2.5rem;
+/*  SIZING AND RESPONSIVE WIDTHS  */
+section,
+main {
+  width: 100%;
 }
-.center-text {
-  text-align: center;
+#banner-wrp,
+#main-wrp,
+#contact-wrp {
+  width: calc(100% - 2rem);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 0;
 }
-.dimmed {
-  color: var(--sand-shadow);
-}
-.line-through {
-  text-decoration: line-through;
-}
-.normal-wght {
-  font-weight: 400;
-}
-.first-letter {
-  margin-right: 0.3px;
 
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
-  font-size: 1.3rem;
+/*  SECTION BG COLORING  */
+#banner {
+  background-color: var(--background-dark);
 }
-.ident {
-  margin-left: 0.5rem;
+main {
+  background-color: var(--sand);
+
+  color: var(--background);
 }
-.section-title {
-  margin: 2rem 0 1rem 0;
+#contact {
+  background-color: var(--background-dark);
 }
-.italic {
-  font-style: italic;
+
+/*  TEXT CLASSES AND APPEARENCE  */
+a {
+  color: var(--old-orange);
 }
-.bold {
-  font-weight: 600;
+a::after {
+  content: "";
+
+  display: inline-block;
+
+  width: 0.9rem;
+  aspect-ratio: 1/1;
+  margin: 0 0.2rem;
+
+  background-image: url("../assets/img/link.svg");
+  background-size: contain;
 }
 p {
   margin-bottom: 1rem;
@@ -87,48 +85,66 @@ p {
   line-height: 1.5rem;
   letter-spacing: 0.3px;
 }
-p a {
-  color: var(--old-orange);
+.section-title {
+  margin-bottom: 2rem;
+
+  font-weight: 700;
+  font-size: 2rem;
+}
+.section-subtitle {
+  margin: 1.5rem 0;
+
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.center-text {
+  display: block;
+
+  text-align: center;
+}
+.dimmed {
+  color: var(--sand-shadow);
+}
+.italic {
+  font-style: italic;
+}
+.bold {
+  font-weight: 600;
+}
+.bigger {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+.line-through {
+  text-decoration: line-through;
+}
+.ident {
+  margin-left: 1rem;
 }
 
-/* * MILD RESPOSIVENESS * */
-section,
-#landscape-deco div:nth-child(3) {
-  width: calc(100% - 2rem);
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* * HOME BANNER * */
-#home-banner {
-  margin: 2rem auto;
-  padding: 2rem;
-
+/*  BANNER  */
+#banner-wrp-casing {
   border: 2px solid var(--background);
   border-radius: 12px;
+
+  padding: 3rem;
 }
-header {
+
+#banner-wrp-casing div:nth-child(1) {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 2rem;
+  justify-content: space-between;
+  gap: calc(3rem - 10px);
 }
-#logo {
-  width: 4rem;
-}
-#deco-lines-wrp {
-  display: inline-block;
-
-  height: 7px;
-  width: 100%;
+#banner-wrp-casing div:nth-child(1) img {
+  height: 3rem;
 }
 #deco-lines {
   display: flex;
   align-items: center;
-  justify-content: center;
 
-  height: 100%;
-  width: 60%;
+  height: 7px;
+  width: 100%;
 
   border: 1px solid var(--sand);
   border-top-left-radius: 7px;
@@ -137,10 +153,8 @@ header {
   overflow: hidden;
 }
 #deco-lines div {
-  height: 100%;
   width: 20%;
-
-  transform: skew(-25deg);
+  height: 100%;
 }
 #deco-lines div:nth-child(1) {
   background-color: var(--sand);
@@ -157,68 +171,105 @@ header {
 #deco-lines div:nth-child(5) {
   background-color: var(--old-orange);
 }
-#home-banner-text {
-  margin: 40px 0;
+#banner-text {
+  margin: 3rem 0;
 
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
   font-size: 2.5rem;
-  text-align: start;
 }
-#home-banner-profile {
+#profile {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 1rem;
 }
 #profile-pic {
-  width: 4rem;
-  aspect-ratio: 1/1;
+  width: 3.5rem;
 
-  border-radius: 10px;
+  border-radius: 7px;
+}
+#profile-info {
+  display: block;
 }
 h1 {
-  font-weight: 600;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
 }
-#home-banner-profile-info h2 {
+#profile-info h2 {
   font-weight: 300;
   font-size: 1rem;
 }
 
-/* * LANDSCAPE DECO * */
-#landscape-deco {
+/*  DECORATION ART SECTIONS  */
+#deco-atmosphere-layers div {
   position: relative;
 
   width: 100%;
-
-  background-color: var(--sand);
-
-  color: var(--background);
+  height: 60px;
 }
-#landscape-deco div:nth-child(1) {
+#deco-atmosphere-layers div:nth-child(1) {
+  background-color: var(--background-dark);
+}
+#deco-atmosphere-layers div:nth-child(2) {
+  background-color: var(--background);
+}
+#deco-atmosphere-layers div:nth-child(3) {
+  background-color: var(--sand-shadow);
+}
+#deco-atmosphere-layers div svg {
   position: absolute;
 
   width: 100%;
+  height: 100%;
+}
+
+#deco-landscape {
+  position: relative;
+
+  height: calc(120px + 3rem);
+
+  background-color: var(--sand);
+}
+#deco-landscape div {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+}
+#deco-landscape div:nth-child(1) {
   height: 60px;
 
-  background-image: url("../assets/img/pine-trees.png");
+  background-image: url("../assets/img/pine-trees.svg");
+  transform: rotate(180deg);
+
+  z-index: 4;
+}
+#deco-landscape div:nth-child(2) {
+  height: 180px;
+
+  background-image: url("../assets/img/mountains.svg");
+  background-repeat: repeat-x;
+  transform: rotate(180deg);
+
+  z-index: 3;
+}
+#deco-landscape div:nth-child(3) {
+  height: 120px;
+
+  opacity: 0.35;
+  background-image: url("../assets/img/mountains.svg");
+  background-position: 100% -20px;
+  background-repeat: repeat-x;
+  transform: rotate(180deg);
+  transform: scaleY(-1);
 
   z-index: 2;
 }
-#landscape-deco div:nth-child(2) {
-  position: absolute;
+#deco-landscape div:nth-child(4) {
+  margin-bottom: 120px;
+  height: 60px;
 
-  width: 100%;
-  height: 120px;
-
-  background-image: url("../assets/img/mountains.svg");
-  background-position: 50%;
-
-  z-index: 1;
-}
-#landscape-deco div:nth-child(3) img {
-  margin-top: 100px;
-
-  filter: drop-shadow(0 0 50px var(--old-orange));
-
-  z-index: 0;
+  background-image: url("../assets/img/sun.svg");
+  background-repeat: no-repeat;
+  background-position: 70%;
 }
