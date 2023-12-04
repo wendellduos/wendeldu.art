@@ -94,7 +94,7 @@ p {
   font-size: 2rem;
 }
 .section-subtitle {
-  margin: 1.5rem 0;
+  margin: 3rem 0 1.5rem 0;
 
   font-weight: 700;
   font-size: 1.5rem;
@@ -213,7 +213,7 @@ nav {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.5rem;
 
   padding: 3rem 0;
 
@@ -225,7 +225,7 @@ nav h3 {
   font-size: 1rem;
 }
 nav div {
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1rem;
 
   border-top: 1px solid var(--sand-shadow);
 }
@@ -239,6 +239,39 @@ nav div {
 }
 .nav-link:hover {
   color: var(--old-orange);
+}
+
+/*  MUSIC PLAYER  */
+#music-player {
+  display: flex;
+  align-items: center;
+
+  height: 10rem;
+  margin: 2rem 0 1rem 0;
+
+  border: 2px solid var(--sand-shadow);
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+#controls,
+#info {
+  width: 48%;
+  height: 100%;
+}
+#separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 4%;
+  height: 100%;
+}
+#separator div {
+  width: 2px;
+  height: calc(100% - 2rem);
+
+  background-color: var(--sand-shadow);
 }
 
 /*  DECORATION ART SECTIONS  */

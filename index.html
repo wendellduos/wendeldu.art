@@ -101,27 +101,34 @@
         </p>
         <p>No mais, seja bem-vindo(a)!</p>
 
+        <!-- creations section -->
+
         <br /><br /><br />
         <h2 id="creations" class="section-title">Criações</h2>
-        <p>
-          Uma coletânea de algumas das coisas que criei. Talvez em algumas delas você se pergunte
-          "por que?". E eu respondo:
-        </p>
-        <p class="center-text italic bigger">Porque não?</p>
+        <p>Uma coletânea de algumas das coisas que criei.</p>
 
-        <h3 class="section-subtitle">Músicas</h3>
-
-        <!-- conteudo musical -->
-        <br /><br /><br />
-
-        <p class="center-text">Os exemplos são instrumentais</p>
+        <h3 class="section-subtitle center-text">Música</h3>
         <p>
           Na produção musical aprecio muito a capacidade de criar sons do zero (Sound Design em
           inglês). Por isso, faço uso de sintetizadores e pós-processamento para atingir os sons e
           texturas que mentalizo.
         </p>
+        <audio src="./assets/music/drown.mp3"></audio>
+        <audio src="./assets/music/motion.mp3"></audio>
+        <audio src="./assets/music/caier.mp3"></audio>
+        <audio src="./assets/music/windchime.mp3"></audio>
+        <div id="music-player">
+          <div id="controls">
+            <button data-job="previous" type="button">Previous</button>
+            <button data-job="playPause" type="button">Play</button>
+            <button data-job="next" type="button">Next</button>
+          </div>
+          <div id="separator"><div></div></div>
+          <div id="info"></div>
+        </div>
+        <p class="center-text dimmed">Os exemplos são instrumentais</p>
 
-        <h3 class="section-subtitle">Galeria</h3>
+        <h3 class="section-subtitle center-text">Galeria</h3>
 
         <!-- conteudo fotografico -->
         <br /><br /><br />
@@ -132,7 +139,7 @@
           imagem.
         </p>
 
-        <h3 class="section-subtitle">Programação</h3>
+        <h3 class="section-subtitle center-text">Programação</h3>
 
         <!-- conteudo programatico -->
         <br /><br /><br />
@@ -170,5 +177,6 @@
 
       <!-- adicionar arquivo de curriculo -->
     </section>
+    <script src="script.js"></script>
   </body>
 </html>
