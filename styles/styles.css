@@ -243,35 +243,81 @@ nav div {
 
 /*  MUSIC PLAYER  */
 #music-player {
+  position: relative;
+
   display: flex;
   align-items: center;
 
-  height: 10rem;
-  margin: 2rem 0 1rem 0;
+  max-width: 600px;
+  margin: 2rem auto 1rem auto;
+  padding: 3rem 0;
 
-  border: 2px solid var(--sand-shadow);
   border-radius: 12px;
-
-  overflow: hidden;
+  background-color: var(--background);
 }
-#controls,
-#info {
-  width: 48%;
-  height: 100%;
-}
-#separator {
+#controls {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 
-  width: 4%;
-  height: 100%;
+  width: 100%;
 }
-#separator div {
-  width: 2px;
-  height: calc(100% - 2rem);
+#controls button {
+  padding: 1.3rem;
 
+  border: none;
+  border-radius: 50%;
+  background-color: var(--sand);
+  background-size: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: background-color 0.2s ease-out;
+
+  cursor: pointer;
+}
+#controls button:hover {
+  background-color: var(--old-orange) !important;
+}
+#controls button:nth-child(1) {
   background-color: var(--sand-shadow);
+  background-image: url("../assets/img/next-icon.svg");
+  transform: rotate(180deg);
+}
+#controls button:nth-child(2) {
+  padding: 2rem;
+
+  background-image: url("../assets/img/play-icon.svg");
+  background-position: 1.6rem;
+}
+#controls button:nth-child(3) {
+  background-image: url("../assets/img/next-icon.svg");
+}
+#track-indicator {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.4rem;
+}
+.track-indicator-item {
+  display: inline-block;
+
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-left: 0.4rem;
+
+  border-radius: 50%;
+
+  transition: background-color 0.2s ease-out;
+}
+#info {
+  position: absolute;
+  bottom: 0;
+  right: 0.9rem;
+
+  height: 2rem;
+
+  color: var(--sand);
 }
 
 /*  DECORATION ART SECTIONS  */
