@@ -266,19 +266,20 @@ nav div {
 #controls button {
   padding: 1.3rem;
 
-  border: none;
+  border: 2px solid var(--sand);
   border-radius: 50%;
   background-color: var(--sand);
   background-size: 1rem;
   background-position: center;
   background-repeat: no-repeat;
 
-  transition: background-color 0.2s ease-out;
+  transition-property: background-color border;
+  transition: 0.2s ease-out;
 
   cursor: pointer;
 }
 #controls button:hover {
-  background-color: var(--old-orange) !important;
+  border: 2px solid var(--old-orange) !important;
 }
 #controls button:nth-child(1) {
   background-color: var(--sand-shadow);
