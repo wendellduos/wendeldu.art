@@ -4,6 +4,7 @@
   --sand: #fffcf2;
   --sand-shadow: #ccc5b9;
   --background: #403d39;
+  --background-transparent: #403d3900;
   --background-dark: #252422;
   --old-orange: #eb5e28;
 }
@@ -65,10 +66,10 @@ main {
 }
 
 /*  TEXT CLASSES AND APPEARENCE  */
-a:not(.nav-link) {
+a:not(.nav-link, #to-gallery) {
   color: var(--old-orange);
 }
-a:not(.nav-link):after {
+a:not(.nav-link, #to-gallery):after {
   content: "";
 
   display: inline-block;
@@ -319,6 +320,92 @@ nav div {
   height: 2rem;
 
   color: var(--sand);
+}
+
+/*  GALLERY PREVIEW  */
+#gallery-preview-container {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  width: 100%;
+  aspect-ratio: 1.7/1;
+  padding: 0.8rem 0.85rem;
+  margin: 2rem 0;
+
+  background-color: var(--background);
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+#gallery-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 40%;
+  height: 100%;
+
+  background-image: linear-gradient(to right, var(--background-transparent), var(--background));
+}
+#to-gallery {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.6rem 0.5rem 1rem;
+  margin-right: 2rem;
+
+  border-radius: 40px;
+  background-color: var(--old-orange);
+
+  text-decoration: none;
+  color: var(--sand);
+
+  transition: padding 0.2s ease-out;
+}
+#to-gallery:hover {
+  padding: 0.7rem 0.8rem 0.7rem 1.2rem;
+}
+#to-gallery div {
+  display: inline-block;
+
+  width: 2rem;
+  aspect-ratio: 1/1;
+
+  border-radius: 50%;
+  background-color: var(--background);
+}
+#gallery-row1,
+#gallery-row2 {
+  display: inline-flex;
+  gap: 0.4rem;
+
+  width: 100%;
+  height: calc(50% - 0.2rem);
+  border-radius: 3px;
+
+  overflow: hidden;
+}
+#gallery-row1 img,
+#gallery-row2 img {
+  height: 100%;
+}
+@media screen and (max-width: 600px) {
+  #gallery-overlay {
+    width: 50%;
+  }
+  #to-gallery {
+    margin-right: 1rem;
+
+    font-size: 0.8rem;
+  }
 }
 
 /*  DECORATION ART SECTIONS  */
