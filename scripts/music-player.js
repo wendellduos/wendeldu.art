@@ -1,4 +1,5 @@
 /*  MUSIC PLAYER  */
+
 // define initial player states
 let current = 0;
 let isPlaying = false;
