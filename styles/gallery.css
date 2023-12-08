@@ -58,8 +58,62 @@ h1 {
 .l {
   width: 100%;
 }
-.column img {
+.gallery-img {
   width: 100%;
 
+  opacity: 0;
   border-radius: 5px;
+
+  transition: opacity 1s ease-out;
+
+  cursor: pointer;
+}
+
+/*  OVERLAY  */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+}
+.hidden {
+  opacity: 0;
+}
+.shown {
+  opacity: 1;
+}
+.no-display {
+  display: none;
+}
+.display {
+  display: flex;
+}
+#img-display {
+  max-width: calc(100% - 2rem);
+  max-height: calc(100% - 2rem);
+  margin: auto;
+}
+#close-img-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 2rem;
+  aspect-ratio: 1/1;
+  margin: 2rem;
+
+  border: none;
+  background-image: url("../assets/img/cross-circle.svg");
+  background-size: cover;
+  background-color: transparent;
+
+  cursor: pointer;
 }

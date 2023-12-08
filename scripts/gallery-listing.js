@@ -70,10 +70,49 @@ let imagesPerColumn = Object.keys(images).length / columns.length;
 
 for (i = 0; i <= images.length - 1; i++) {
   if (i < imagesPerColumn) {
-    columns[0].innerHTML += `<img src="./img/${images[i]}" alt="Fotografia ${alts[i]}" />`;
+    columns[0].innerHTML += `<img class="gallery-img" onload="fadeIn(this)" src="./img/${images[i]}" alt="Fotografia ${alts[i]}" />`;
   } else if (i >= imagesPerColumn && i < imagesPerColumn * 2) {
-    columns[1].innerHTML += `<img src="./img/${images[i]}" alt="Fotografia ${alts[i]}" />`;
+    columns[1].innerHTML += `<img class="gallery-img" onload="fadeIn(this)" src="./img/${images[i]}" alt="Fotografia ${alts[i]}" />`;
   } else {
-    columns[2].innerHTML += `<img src="./img/${images[i]}" alt="Fotografia ${alts[i]}" />`;
+    columns[2].innerHTML += `<img class="gallery-img" onload="fadeIn(this)" src="./img/${images[i]}" alt="Fotografia ${alts[i]}" />`;
   }
+}
+
+let fadeDelay = 50;
+
+function fadeIn(img) {
+  setTimeout(() => {
+    img.style.opacity = 1;
+  }, fadeDelay);
+
+  fadeDelay += 50;
+}
+
+// overlay and close button are set
+const overlay = document.getElementById("overlay");
+overlay.addEventListener("click", () => {
+  closeImg();
+});
+
+const closeImgBtn = `<button type="button" id="close-img-btn" onclick="closeImg()"></button>`;
+
+// add classes to hide overlay
+function closeImg() {
+  overlay.classList = "hidden no-display";
+}
+
+// get all images and add listeners for clicks to open image in overlay
+const imgList = document.querySelectorAll(".gallery-img");
+
+imgList.forEach((img) => {
+  img.addEventListener("click", () => {
+    openImg(img.src);
+  });
+});
+
+// add classes to show overlay and create image and button elements
+function openImg(src) {
+  overlay.classList = "shown display";
+
+  overlay.innerHTML = `<img id="img-display"  src="${src}" alt="" />${closeImgBtn}`;
 }
