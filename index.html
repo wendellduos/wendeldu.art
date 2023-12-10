@@ -8,30 +8,19 @@
     <link rel="stylesheet" href="./styles/home.css" />
   </head>
   <body>
+    <header>
+      <div id="header-wrp">
+        <img id="header-logo" src="./assets/img/logo-full-scale.svg" alt="Imagem da logo" />
+      </div>
+    </header>
+
     <section id="banner">
       <div id="banner-wrp">
-        <div id="banner-wrp-casing">
-          <div>
-            <img id="logo" src="./assets/img/logo-full-scale.svg" alt="Imagem da logo" />
-            <div id="deco-lines">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-          </div>
-          <h2 class="center-text" id="banner-text">
-            Que meus feitos possam trazer um pouco de paz e alegria a este mundo conturbado.
-          </h2>
-          <div id="profile">
-            <img id="profile-pic" src="./assets/img/profile.webp" alt="Imagem de perfil" />
-            <div id="profile-info">
-              <h1>Wendel Duarte</h1>
-              <h2 class="dimmed">Desenvolvedor Web</h2>
-            </div>
-          </div>
+        <div id="profile-pic-wrp">
+          <img id="profile-pic" src="./assets/img/profile.webp" alt="Imagem de perfil" />
         </div>
+        <h1>Wendel Duarte dos Santos</h1>
+        <h2 class="dimmed">Web & Waves</h2>
       </div>
     </section>
 
@@ -43,24 +32,10 @@
       </div>
       <div>
         <svg preserveAspectRatio="none" viewbox="0 -10 100 70">
-          <circle cx="50" cy="50" r="57" fill="var(--sand-shadow)" />
-        </svg>
-      </div>
-      <div>
-        <svg preserveAspectRatio="none" viewbox="0 -10 100 70">
           <circle cx="50" cy="50" r="57" fill="var(--sand)" />
         </svg>
       </div>
     </section>
-
-    <nav>
-      <h3 class="dimmed thin uppercase">Atalhos</h3>
-      <div>
-        <a class="nav-link thin uppercase" href="#about">Sobre</a>
-        <a class="nav-link thin uppercase" href="#creations">Criações</a>
-        <a class="nav-link thin uppercase" href="#contact">Contato</a>
-      </div>
-    </nav>
 
     <main>
       <div id="main-wrp">
@@ -69,9 +44,6 @@
           Fui fabricado em 98 na cidade de Macapá - AP. Uma cidade simples que, com todos seus
           defeitos, abrigou minha família e eu até o ano de 2017, onde nos mudamos para Joinville -
           SC.
-        </p>
-        <p class="italic center-text dimmed line-through">
-          Por que é tão difícil escrever autodescrições?
         </p>
         <p>
           Em geral, me considero <span class="bold">introvertido</span> e
@@ -100,9 +72,6 @@
           Esse aqui é meu espaço pessoal na internet, espero que o conteúdo aqui presente reflita
           quem eu sou na vida real.
         </p>
-        <p>No mais, seja bem-vindo(a)!</p>
-
-        <!-- creations section -->
 
         <br /><br /><br />
         <h2 id="creations" class="section-title">Criações</h2>
@@ -159,20 +128,15 @@
         </div>
 
         <h3 class="section-subtitle">&bull; Programação</h3>
-
-        <!-- conteudo programatico -->
-        <br /><br /><br />
-
         <p>
           Atualmente me foco e limito a adquirir conhecimento especializado em
           <span class="bold">desenvolvimento web</span>, onde utilizo HTML, CSS, JavaScript, PHP e
           MariaDB para minhas aplicações.
         </p>
-        <p>
-          É verdade que sou principalmente <span class="italic">self-taught</span>, e por isso gosto
-          de mencionar que estou sempre buscando me aprofundar nos conhecimentos pertinentes, e
-          pretendo diversificar minhas capacidades, sem me sobrecarregar.
-        </p>
+        <div id="programming-preview-container">
+          <img src="./assets/img/under-work-icon.png" alt="Ilustração de chaves de fenda " />
+          <p class="center-text">Ainda em preparação...</p>
+        </div>
       </div>
     </main>
 
@@ -193,9 +157,24 @@
           <a href="https://linkedin.com/in/wendellduos" target="_blank">LinkedIn</a>.
         </p>
       </div>
-
-      <!-- adicionar arquivo de curriculo -->
     </section>
+
+    <footer>
+      <div id="footer-wrp">
+        <div>
+          <img src="./assets/img/logo-full-scale.svg" alt="Imagem da logo" />
+          <p class="uppercase center-text" id="footer-phrase">
+            Que meus feitos possam trazer um pouco de paz e alegria a este mundo conturbado.
+          </p>
+          <p id="footer-location">Joinville, SC</p>
+        </div>
+        <p class="thin">
+          Para ver o código-fonte do site, clique
+          <a href="https://github.com/wendellduos/wendeldu.art" target="_blank">aqui</a>.
+        </p>
+      </div>
+    </footer>
+
     <script src="./scripts/music-player.js"></script>
   </body>
 </html>

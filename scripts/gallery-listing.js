@@ -98,7 +98,7 @@ const closeImgBtn = `<button type="button" id="close-img-btn" onclick="closeImg(
 
 // add classes to hide overlay
 function closeImg() {
-  overlay.classList = "hidden no-display";
+  overlay.classList = "hidden";
 }
 
 // get all images and add listeners for clicks to open image in overlay
@@ -112,7 +112,7 @@ imgList.forEach((img) => {
 
 // add classes to show overlay and create image and button elements
 function openImg(src) {
-  overlay.classList = "shown display";
+  overlay.classList = "shown";
 
   overlay.innerHTML = `<img id="img-display"  src="${src}" alt="" />${closeImgBtn}`;
 }

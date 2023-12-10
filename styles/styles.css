@@ -41,6 +41,66 @@ body {
 /*  SIZING AND RESPONSIVE WIDTHS  */
 section,
 main,
-header {
+header,
+footer {
   width: 100%;
+}
+
+/*  HEADER  */
+#header-wrp {
+  width: calc(100% - 2rem);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+#header-logo {
+  position: relative;
+
+  height: 2.5rem;
+}
+
+/*  FOOTER  */
+#footer-wrp {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  width: calc(100% - 2rem);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 0;
+
+  border-top: 2px solid var(--background);
+}
+#footer-wrp div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 100%;
+  padding: 0 2rem 2rem 3rem;
+}
+#footer-wrp div:nth-child(1) img {
+  width: 20%;
+  padding-bottom: 2rem;
+}
+#footer-phrase {
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--sand-shadow);
+}
+#footer-location {
+  color: var(--background);
+}
+#footer-location::after {
+  content: "";
+
+  display: inline-block;
+
+  width: 1rem;
+  aspect-ratio: 1/1;
+  margin-left: 0.3rem;
+
+  background-image: url("../assets/img/location-marker.svg");
+  background-size: cover;
 }

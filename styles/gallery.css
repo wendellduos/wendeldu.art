@@ -86,14 +86,10 @@ h1 {
 }
 .hidden {
   opacity: 0;
+  display: none;
 }
 .shown {
   opacity: 1;
-}
-.no-display {
-  display: none;
-}
-.display {
   display: flex;
 }
 #img-display {
